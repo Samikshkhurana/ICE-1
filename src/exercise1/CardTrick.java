@@ -8,7 +8,9 @@ package exercise1;
  * test 
  * @author dancye
  * @author Paul Bonenfant Jan 25, 2022 
+ 
  */
+import java.util.Scanner;
 public class CardTrick {
     
     public static void main(String[] args) {
@@ -21,13 +23,35 @@ public class CardTrick {
 		
             card.setValue((int)(1+Math.random()*13));
             // 
-            card.setSuit(Card.SUITS[(int)(1+Math.random()*3)]);
+            card.setSuit(Card.SUITS[(int)(0+Math.random()*3)]);
             // Hint: You can use Random -> random.nextInt(n) to get a random number between 0 and n-1 (inclusive)
             //       Don't worry about duplicates at this point
             hand[i]=card;
-		System.out.println(hand[i]);
+		System.out.println(hand[i].getSuit()+ hand[i].getValue());
         }
-
+        Scanner sc = new Scanner(System.in);
+        Card crd = new Card();
+        System.out.print("Enter the Value of suit: ");
+        crd.setValue(sc.nextInt());
+        System.out.println("Enter the suit: ");
+        crd.setSuit(sc.next());
+        
+           
+//           System.out.println("Enter the Value of suit");
+//           int cValue = sc.nextInt();
+//           System.out.println("Enter the suit ");
+//           String cSuit =sc.next();
+//           
+           for (int i = 0; i < hand.length; i++){
+               if(hand[i].getValue()== crd.getValue() && hand[i].getSuit().equalsIgnoreCase(crd.getSuit()) ){ //hearts, /hear ignorecaswe 
+                   printInfo();
+               }
+               else{
+                   System.out.println("OOPS!!Input DIDN'T MATCH");
+               }
+                   
+           }
+           
         // insert code to ask the user for Card value and suit, create their card
         // and search the hand here. 
         // Hint: You can ask for values 1 to 10, and then
