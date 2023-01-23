@@ -13,6 +13,13 @@ public class CardTrick {
 		System.out.println()
             
         }
+	    Scanner sc = new Scanner(System.in);
+        Card crd = new Card();
+
+        System.out.print(" Enter the suit: ");
+        crd.setSuit(sc.next());
+        System.out.print("Enter the Value of suit: ");
+        crd.setValue(sc.nextInt());
 
      
         
