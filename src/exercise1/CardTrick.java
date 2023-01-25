@@ -1,5 +1,5 @@
 package exercise1;
-
+import java.util.Scanner;
 
 public class CardTrick {
     
@@ -9,17 +9,30 @@ public class CardTrick {
 
         for (int i = 0; i < hand.length; i++) {
             Card card = new Card();
+            card.setValue((int)(Math.random()*13));
+            card.setSuit(Card.SUITS[(int)(0+Math.random()*3)]);
 		hand[i]=card;
-		System.out.println()
+		System.out.println(hand[i].getValue()+hand[i].getSuit());
             
         }
-	    Scanner sc = new Scanner(System.in);
+        //I AM DONE!!!
+	Scanner sc = new Scanner(System.in);
         Card crd = new Card();
 
         System.out.print(" Enter the suit: ");
-        crd.setSuit(sc.next());
+        String b=sc.next();
+       
         System.out.print("Enter the Value of suit: ");
-        crd.setValue(sc.nextInt());
+        int a=sc.nextInt();
+        
+        
+        for(int v=0;v<hand.length;v++){
+        if(a==hand[v].getValue() && b.equalsIgnoreCase(hand[v].getSuit())){
+        
+        }
+            
+        }
+        
 
      
         
