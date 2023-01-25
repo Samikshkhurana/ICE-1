@@ -15,7 +15,7 @@ public class CardTrick {
 		System.out.println(hand[i].getValue()+hand[i].getSuit());
             
         }
-        //I AM DONE!!!
+        
 	Scanner sc = new Scanner(System.in);
         Card crd = new Card();
 
