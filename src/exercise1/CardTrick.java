@@ -41,14 +41,14 @@ public class CardTrick {
    
     private static void printInfo() {
     
-        System.out.println("Congratulations, you guessed right!");
+        System.out.println("Congratulations!You guesseed right");
         System.out.println();
         
         System.out.println("My name is Samiksha, but you can call me sami, sam or khurana");
         System.out.println();
         
         System.out.println("My career ambitions:");
-        System.out.println("-- Score good grades");
+        System.out.println("-- Score good marks");
         System.out.println("-- Have a semester with no violations of academic integrity!");
 	System.out.println();	
 
