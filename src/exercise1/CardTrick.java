@@ -6,7 +6,7 @@ public class CardTrick {
     public static void main(String[] args) {
         
         Card[] hand = new Card[7];
-
+        
         for (int i = 0; i < hand.length; i++) {
             Card card = new Card();
             card.setValue((int)(Math.random()*13));
@@ -25,12 +25,20 @@ public class CardTrick {
         System.out.print("Enter the Value of suit: ");
         int a=sc.nextInt();
         
-        
+        boolean h = false;
         for(int v=0;v<hand.length;v++){
         if(a==hand[v].getValue() && b.equalsIgnoreCase(hand[v].getSuit())){
-        
-        }
+            h = true;
             
+        }
+        else continue;
+            
+        }
+        if(h){
+            printInfo();
+        }
+        else{
+            System.out.println("OOPS!!WRONG INPUT");
         }
         
 
@@ -38,7 +46,7 @@ public class CardTrick {
         
     }
 
-   //I AM DONE!!!!
+   //!
     private static void printInfo() {
     
         System.out.println("Congratulations!You guesseed right");
